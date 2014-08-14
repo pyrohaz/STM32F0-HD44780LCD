@@ -9,6 +9,11 @@
 #define H_D2 GPIO_Pin_3
 #define H_D3 GPIO_Pin_4
 #define H_D4 GPIO_Pin_5
+
+//Pin required for capacitive charge
+//pump!
+#define H_ChgPmp GPIO_Pin_7
+
 #define HD44780_GPIO GPIOA
 
 //HD44780 Register definitions
@@ -56,6 +61,14 @@ volatile uint32_t MSec = 0;
 //Millisecond counter interrupt using
 //the internal SysTick timer
 void SysTick_Handler(void){
+	static uint8_t CPState = 0;
+
+	//Write the current charge pump pin state
+	GPIO_WriteBit(HD44780_GPIO, H_ChgPmp, CPState);
+
+	//Invert the value of the current state
+	CPState^=1;
+
 	MSec++;
 }
 
@@ -217,7 +230,7 @@ int main(void)
 	//the output speed to the slowest (2MHz - also
 	//defined in the datasheet as the fastest rate
 	//for the HD44780 data port).
-	G.GPIO_Pin = H_RS|H_EN|H_D1|H_D2|H_D3|H_D4;
+	G.GPIO_Pin = H_RS|H_EN|H_D1|H_D2|H_D3|H_D4|H_ChgPmp;
 	G.GPIO_Mode = GPIO_Mode_OUT;
 	G.GPIO_OType = GPIO_OType_PP;
 	G.GPIO_PuPd = GPIO_PuPd_NOPULL;

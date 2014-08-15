@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="4.4.1 -mcpu=cortex-m0 -mthumb -g -nostartfiles -Map=HD44780.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\HD44780 -TC:\CooCox\CoIDE\configuration\ProgramData\HD44780/arm-gcc-link.ld -g">
-      <target file="HD44780.elf" lastModified="147d672f99f">
+      <target file="HD44780.elf" lastModified="147d8603597">
          <source file="..\obj\stm32f0xx_rcc.o" lastModified="147d672f064"/>
-         <source file="..\obj\main.o" lastModified="147d672f1d8"/>
+         <source file="..\obj\main.o" lastModified="147d860318a"/>
          <source file="..\obj\startup_stm32f0xx.o" lastModified="147d672f2ab"/>
          <source file="..\obj\system_stm32f0xx_temp.o" lastModified="147d672f3e5"/>
          <source file="..\obj\stm32f0xx_gpio.o" lastModified="147d672f58e"/>

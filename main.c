@@ -10,6 +10,9 @@
 #define H_D3 GPIO_Pin_4
 #define H_D4 GPIO_Pin_5
 
+//Pin for controlling the LED backlight!
+#define H_LEDCtrl GPIO_Pin_6
+
 //Pin required for capacitive charge
 //pump!
 #define H_ChgPmp GPIO_Pin_7
@@ -58,10 +61,31 @@
 //Timekeeping variable
 volatile uint32_t MSec = 0;
 
+//LED brightness variable, allows 16 different
+//steps of backlight brightness (1 to 16)!
+volatile uint8_t LEDBrightness = 16;
+
 //Millisecond counter interrupt using
 //the internal SysTick timer
 void SysTick_Handler(void){
-	static uint8_t CPState = 0;
+	static uint8_t CPState = 0, LEDCnt = 0;
+
+	//Increment the LED Counter
+	LEDCnt++;
+
+	//If the counter is less than the brightness
+	//variable, output a high, otherwise output
+	//a low. The poor mans PWM! The PWM will
+	//operate at a frequency of 1000/16 = 62.5Hz
+	if(LEDCnt<LEDBrightness){
+		GPIO_SetBits(HD44780_GPIO, H_LEDCtrl);
+	}
+	else{
+		GPIO_ResetBits(HD44780_GPIO, H_LEDCtrl);
+	}
+
+	//Rollover once the LEDCnt gets to 16.
+	LEDCnt &= 15;
 
 	//Write the current charge pump pin state
 	GPIO_WriteBit(HD44780_GPIO, H_ChgPmp, CPState);
@@ -230,7 +254,7 @@ int main(void)
 	//the output speed to the slowest (2MHz - also
 	//defined in the datasheet as the fastest rate
 	//for the HD44780 data port).
-	G.GPIO_Pin = H_RS|H_EN|H_D1|H_D2|H_D3|H_D4|H_ChgPmp;
+	G.GPIO_Pin = H_RS|H_EN|H_D1|H_D2|H_D3|H_D4|H_LEDCtrl|H_ChgPmp;
 	G.GPIO_Mode = GPIO_Mode_OUT;
 	G.GPIO_OType = GPIO_OType_PP;
 	G.GPIO_PuPd = GPIO_PuPd_NOPULL;

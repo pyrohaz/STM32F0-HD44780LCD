@@ -22,6 +22,9 @@
 
 #define HD44780_GPIO GPIOA
 
+//HD4780 X pixels
+#define H_XSize 16
+
 //HD44780 Register definitions
 #define H_ClearDisp		0x01
 #define H_RetHome		0x02

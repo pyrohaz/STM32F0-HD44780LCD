@@ -1,5 +1,29 @@
 #include <HD44780LIB.h>
 
+/*
+ * HD44780LIB.c
+ * Author: Harris Shallcross
+ * Year: ~18/8/2014
+ *
+ *A pretty simple library used to interface a HD44780 LCD
+ *with an STM32F0 Discovery board using standard GPIO pins.
+ *The library offers functionality of providing a negative
+ *voltage required for good contrasts at lower supply
+ *voltages. This is generated using a charge pump and a
+ *simple external circuit. The library also offers 4bits
+ *of backlight brightness control through simple PWM.
+ *The library is dependent on a SysTick interrupt and a
+ *1ms Delay function provided in the example code.
+ *The library also offers simple functions to print strings,
+ *characters and numbers, along with clearing the display
+ *and a few simple math functions meaning that minimal
+ *external libraries are required.
+ *
+ *The code is released under the CC-BY license.
+ *
+ *This code is provided AS IS and no warranty is included!
+ */
+
 //LED brightness variable, allows 16 different
 //steps of backlight brightness (1 to 16)!
 volatile uint8_t LEDBrightness = 16;
@@ -184,11 +208,11 @@ int8_t PStr(const char* S, uint8_t X, uint8_t Y){
 	StrLen = Strlen(S);
 
 	//If the string is too long, return -3
-	if(StrLen>15) return -3;
+	if(StrLen>(H_XSize-1)) return -3;
 
 	//If the total string length will be out of
 	//the screen, return -1
-	if(X>(16-StrLen)) return -1;
+	if(X>(H_XSize-1-StrLen)) return -1;
 
 	//If the row is anything other than 1 or 2,
 	//return -2
@@ -219,7 +243,7 @@ int8_t PChar(char C, uint8_t X, uint8_t Y){
 
 	//If the position of the character will be
 	//off the screen, return respective error.
-	if(X>14) return -1;
+	if(X>H_XSize-2) return -1;
 	if(Y!=1 && Y!=2) return -2;
 
 	//If the row is row 1, the address range
@@ -279,7 +303,7 @@ int8_t PNum(int32_t Num, uint8_t X, uint8_t Y, uint8_t Pad){
 
 	//If the length of the number will print
 	//off the screen, return respective error.
-	if(X>(15-Len)) return -1;
+	if(X>((H_XSize-1)-Len)) return -1;
 	if(Y!=1 && Y!=2) return -2;
 
 	//If the row is row 1, the address range

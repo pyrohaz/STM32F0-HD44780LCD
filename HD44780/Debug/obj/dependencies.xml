@@ -27,6 +27,9 @@
       <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147d66dcbdc">
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
       </source>
+      <source file="..\..\..\main.c" lastModified="147ea7d83c4">
+         <include file="..\..\..\HD44780_Library\HD44780LIB.h"/>
+      </source>
       <source file="..\..\..\cmsis_core\core_cmInstr.h" lastModified="147d66dd3a6">
       </source>
       <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="147d66dcbdb">

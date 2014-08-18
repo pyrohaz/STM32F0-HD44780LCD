@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
-   <includePath signature="/I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_core /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_boot /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib\inc /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD">
+   <includePath signature="/I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_core /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_boot /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib\inc /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD /I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\HD44780_Library">
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="147d66dcbcd">
       </source>
       <source file="..\..\..\cmsis_core\core_cm0.h" lastModified="147d66dcfbc">
@@ -10,12 +10,19 @@
       <source file="..\..\..\stm32_lib\inc\stm32f0xx_gpio.h" lastModified="147d66dcbd8">
          <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
       </source>
+      <source file="..\..\..\HD44780_Library\HD44780LIB.h" lastModified="147ea7d41dc">
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_gpio.h"/>
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
+      </source>
       <source file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h" lastModified="147d66dcbd9">
          <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\stm32f0xx.h" lastModified="147d66dcfb8">
          <include file="..\..\..\cmsis_core\core_cm0.h"/>
          <include file="..\..\..\cmsis_boot\system_stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\HD44780_Library\HD44780LIB.c" lastModified="147ea7c19b6">
+         <include file="..\..\..\HD44780_Library\HD44780LIB.h"/>
       </source>
       <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147d66dcbdc">
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>

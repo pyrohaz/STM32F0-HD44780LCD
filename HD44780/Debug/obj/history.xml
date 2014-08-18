@@ -1,19 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_core -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_boot -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib\inc -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD">
-      <target file="stm32f0xx_gpio.o" lastModified="147d672f58e">
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_core -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\cmsis_boot -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib\inc -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\stm32_lib -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD -I..\..\..\workspace\HD44780\STM32F0-HD44780LCD_ChargePump\STM32F0-HD44780LCD\HD44780_Library">
+      <target file="HD44780LIB.o" lastModified="147ea7d8975">
+         <source file="..\..\..\HD44780_Library\HD44780LIB.c" lastModified="147ea7c19b6"/>
+      </target>
+      <target file="stm32f0xx_gpio.o" lastModified="147ea7c403c">
          <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="147d66dcbdb"/>
       </target>
-      <target file="stm32f0xx_rcc.o" lastModified="147d672f064">
+      <target file="stm32f0xx_rcc.o" lastModified="147ea7c3b04">
          <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147d66dcbdc"/>
       </target>
-      <target file="system_stm32f0xx_temp.o" lastModified="147d672f3e5">
+      <target file="system_stm32f0xx_temp.o" lastModified="147ea7c3f1e">
          <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="147d66dcbd3"/>
       </target>
-      <target file="main.o" lastModified="147d860318a">
-         <source file="..\..\..\main.c" lastModified="147d860246b"/>
+      <target file="main.o" lastModified="147ea7d885a">
+         <source file="..\..\..\main.c" lastModified="147ea7d83c4"/>
       </target>
-      <target file="startup_stm32f0xx.o" lastModified="147d672f2ab">
+      <target file="startup_stm32f0xx.o" lastModified="147ea7c3ceb">
          <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="147d66dcbcd"/>
       </target>
    </processor>

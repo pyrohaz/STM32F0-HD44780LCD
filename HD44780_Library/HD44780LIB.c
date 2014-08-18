@@ -19,6 +19,9 @@
  *and a few simple math functions meaning that minimal
  *external libraries are required.
  *
+ *Function descriptions can be found on my blog at:
+ *www.hsel.co.uk
+ *
  *The code is released under the CC-BY license.
  *
  *This code is provided AS IS and no warranty is included!

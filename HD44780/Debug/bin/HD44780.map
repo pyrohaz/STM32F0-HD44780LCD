@@ -192,57 +192,57 @@ Linker script and memory map
                 0x0800022c                SysTick_Handler
  .text.Delay    0x08000264       0x2c ..\obj\main.o
                 0x08000264                Delay
- .text.main     0x08000290       0xc0 ..\obj\main.o
+ .text.main     0x08000290       0xb8 ..\obj\main.o
                 0x08000290                main
  .text.Reset_Handler
-                0x08000350       0x4c ..\obj\startup_stm32f0xx.o
-                0x08000350                Reset_Handler
+                0x08000348       0x4c ..\obj\startup_stm32f0xx.o
+                0x08000348                Reset_Handler
  .text.Default_Handler
-                0x0800039c        0x2 ..\obj\startup_stm32f0xx.o
-                0x0800039c                TIM1_CC_IRQHandler
-                0x0800039c                HardFault_Handler
-                0x0800039c                ADC1_COMP_IRQHandler
-                0x0800039c                PVD_IRQHandler
-                0x0800039c                PendSV_Handler
-                0x0800039c                NMI_Handler
-                0x0800039c                I2C1_IRQHandler
-                0x0800039c                SPI1_IRQHandler
-                0x0800039c                TIM6_DAC_IRQHandler
-                0x0800039c                EXTI2_3_IRQHandler
-                0x0800039c                I2C2_IRQHandler
-                0x0800039c                TIM17_IRQHandler
-                0x0800039c                RTC_IRQHandler
-                0x0800039c                TIM16_IRQHandler
-                0x0800039c                TIM3_IRQHandler
-                0x0800039c                EXTI4_15_IRQHandler
-                0x0800039c                RCC_IRQHandler
-                0x0800039c                DMA1_Channel1_IRQHandler
-                0x0800039c                Default_Handler
-                0x0800039c                CEC_IRQHandler
-                0x0800039c                TIM14_IRQHandler
-                0x0800039c                DMA1_Channel4_5_IRQHandler
-                0x0800039c                TIM15_IRQHandler
-                0x0800039c                EXTI0_1_IRQHandler
-                0x0800039c                SPI2_IRQHandler
-                0x0800039c                SVC_Handler
-                0x0800039c                TS_IRQHandler
-                0x0800039c                WWDG_IRQHandler
-                0x0800039c                TIM2_IRQHandler
-                0x0800039c                DMA1_Channel2_3_IRQHandler
-                0x0800039c                USART2_IRQHandler
-                0x0800039c                FLASH_IRQHandler
-                0x0800039c                USART1_IRQHandler
-                0x0800039c                TIM1_BRK_UP_TRG_COM_IRQHandler
- *fill*         0x0800039e        0x2 
+                0x08000394        0x2 ..\obj\startup_stm32f0xx.o
+                0x08000394                TIM1_CC_IRQHandler
+                0x08000394                HardFault_Handler
+                0x08000394                ADC1_COMP_IRQHandler
+                0x08000394                PVD_IRQHandler
+                0x08000394                PendSV_Handler
+                0x08000394                NMI_Handler
+                0x08000394                I2C1_IRQHandler
+                0x08000394                SPI1_IRQHandler
+                0x08000394                TIM6_DAC_IRQHandler
+                0x08000394                EXTI2_3_IRQHandler
+                0x08000394                I2C2_IRQHandler
+                0x08000394                TIM17_IRQHandler
+                0x08000394                RTC_IRQHandler
+                0x08000394                TIM16_IRQHandler
+                0x08000394                TIM3_IRQHandler
+                0x08000394                EXTI4_15_IRQHandler
+                0x08000394                RCC_IRQHandler
+                0x08000394                DMA1_Channel1_IRQHandler
+                0x08000394                Default_Handler
+                0x08000394                CEC_IRQHandler
+                0x08000394                TIM14_IRQHandler
+                0x08000394                DMA1_Channel4_5_IRQHandler
+                0x08000394                TIM15_IRQHandler
+                0x08000394                EXTI0_1_IRQHandler
+                0x08000394                SPI2_IRQHandler
+                0x08000394                SVC_Handler
+                0x08000394                TS_IRQHandler
+                0x08000394                WWDG_IRQHandler
+                0x08000394                TIM2_IRQHandler
+                0x08000394                DMA1_Channel2_3_IRQHandler
+                0x08000394                USART2_IRQHandler
+                0x08000394                FLASH_IRQHandler
+                0x08000394                USART1_IRQHandler
+                0x08000394                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x08000396        0x2 
  .text.H_LEDPWM
-                0x080003a0       0x54 ..\obj\HD44780LIB.o
-                0x080003a0                H_LEDPWM
+                0x08000398       0x54 ..\obj\HD44780LIB.o
+                0x08000398                H_LEDPWM
  .text.H_ChargePump
-                0x080003f4       0x2c ..\obj\HD44780LIB.o
-                0x080003f4                H_ChargePump
+                0x080003ec       0x2c ..\obj\HD44780LIB.o
+                0x080003ec                H_ChargePump
  .text.H_HWInit
-                0x08000420       0x90 ..\obj\HD44780LIB.o
-                0x08000420                H_HWInit
+                0x08000418       0x98 ..\obj\HD44780LIB.o
+                0x08000418                H_HWInit
  .text.H_W8b    0x080004b0      0x12c ..\obj\HD44780LIB.o
                 0x080004b0                H_W8b
  .text.Strlen   0x080005dc       0x5c ..\obj\HD44780LIB.o
@@ -480,9 +480,9 @@ OUTPUT(HD44780.elf elf32-littlearm)
 
 .debug_line     0x00000000     0x1304
  .debug_line    0x00000000      0x593 ..\obj\stm32f0xx_rcc.o
- .debug_line    0x00000593      0x2de ..\obj\main.o
- .debug_line    0x00000871       0xdb ..\obj\startup_stm32f0xx.o
- .debug_line    0x0000094c      0x461 ..\obj\HD44780LIB.o
+ .debug_line    0x00000593      0x2dd ..\obj\main.o
+ .debug_line    0x00000870       0xdb ..\obj\startup_stm32f0xx.o
+ .debug_line    0x0000094b      0x462 ..\obj\HD44780LIB.o
  .debug_line    0x00000dad      0x1e9 ..\obj\system_stm32f0xx_temp.o
  .debug_line    0x00000f96      0x36e ..\obj\stm32f0xx_gpio.o
 

@@ -114,6 +114,9 @@ void H_HWInit(void){
 
 	//Clear the display before turning it on.
 	ClrDisp();
+
+	//Enable the screen!
+	H_W8b(H_DispCtrl|H_DispOn|H_CursorOff|H_CursrPosNBlnk, 0);
 }
 
 //Our standard 8 bit value write. The HD44780

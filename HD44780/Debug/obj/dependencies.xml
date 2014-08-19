@@ -21,11 +21,11 @@
          <include file="..\..\..\cmsis_core\core_cm0.h"/>
          <include file="..\..\..\cmsis_boot\system_stm32f0xx.h"/>
       </source>
+      <source file="..\..\..\HD44780_Library\HD44780LIB.c" lastModified="147f007755f">
+         <include file="..\..\..\HD44780_Library\HD44780LIB.h"/>
+      </source>
       <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147d66dcbdc">
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
-      </source>
-      <source file="..\..\..\main.c" lastModified="147efce2c7c">
-         <include file="..\..\..\HD44780_Library\HD44780LIB.h"/>
       </source>
       <source file="..\..\..\cmsis_core\core_cmInstr.h" lastModified="147d66dd3a6">
       </source>

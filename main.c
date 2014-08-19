@@ -55,8 +55,6 @@ int main(void)
 	int8_t XDir = 1;
 	char A = 0;
 	int32_t N, P = 0;
-#else
-	H_W8b(H_DispCtrl|H_DispOn|H_CursorOff|H_CursrPosNBlnk, 0);
 #endif
 
 	Delay(1);

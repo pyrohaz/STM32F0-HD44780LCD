@@ -369,12 +369,23 @@ int8_t PNum(int32_t Num, uint8_t X, uint8_t Y, uint8_t Pad){
 int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 	int32_t INum, DNum;
 	uint32_t PrecPow = FPow(10, Prec);
-	uint8_t Len = 0, Cnt, OriginX;
+	uint8_t Len = 0, Cnt, OriginX, NegNum = 0;
+
+	//If the specified row doesn't exist, return value!
+	if(Y!=1 && Y!=2) return -2;
 
 	//If number is less than zero, print '-' sign
 	//and invert the number.
 	if(Num<0.0f){
+		NegNum = 1;
 		Num = -Num;
+	}
+
+	INum = Num;
+
+	//If the negative number flag is set, print
+	//the '-' sign
+	if(NegNum){
 		PChar('-', X, Y);
 
 		//As a new character is printed, increment
@@ -382,12 +393,14 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 		X++;
 	}
 
-	INum = Num;
-
 	//If the integer section of the number is 0
 	//Print the leading zero. Without this, only
 	//a decimal point will be printed!
 	if(INum==0){
+		if((Prec+2+NegNum)>(H_XSize-X)){
+			return - 1;
+		}
+
 		PChar('0', X, Y);
 
 		//Increment the position of X as a new
@@ -400,6 +413,10 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 		//and print it! Increment the X position by
 		//the length of the number.
 		Len = CheckNumLength(INum);
+
+		if((Len+Prec+2+NegNum)>(H_XSize-X)){
+			return - 1;
+		}
 
 		PNum(INum, X, Y, 0);
 		X+=Len;
@@ -445,6 +462,9 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 
 		PNum(DNum, X, Y, 0);
 	}
+
+	//If all printed well, return 0 to indicate success!
+	return 0;
 }
 
 //A simple function to clear the whole display.

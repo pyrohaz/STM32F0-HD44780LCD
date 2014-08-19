@@ -97,7 +97,7 @@ int main(void)
 		//If X has reached the screen boundaries,
 		//reverse the direction that the text moves
 		//by changing the sign infront of XDir.
-		if(X>(15-12) || X<1){
+		if(X>(H_XSize-1-12) || X<1){
 			XDir = -XDir;
 		}
 

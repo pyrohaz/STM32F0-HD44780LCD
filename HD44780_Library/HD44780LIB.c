@@ -246,7 +246,7 @@ int8_t PChar(char C, uint8_t X, uint8_t Y){
 
 	//If the position of the character will be
 	//off the screen, return respective error.
-	if(X>H_XSize-2) return -1;
+	if(X>(H_XSize-2)) return -1;
 	if(Y!=1 && Y!=2) return -2;
 
 	//If the row is row 1, the address range
@@ -263,6 +263,34 @@ int8_t PChar(char C, uint8_t X, uint8_t Y){
 
 	//If all is successful, 0 will be returned!
 	return 0;
+}
+
+//A simple function that compares a number to
+//successive powers of 10 to find the base 10
+//length of the number!
+uint8_t CheckNumLength(int32_t Num){
+	uint8_t Len = 0, Cnt;
+
+	//Find length of number by continuously
+	//comparing to ascending powers of 10.
+	//When the number is less than the power of
+	//10, the length of the number is found and
+	//the loop is complete. 32bits supports
+	//numbers up to 10dp so that is my max loop
+	//size! If a 64bit system is used, this can be
+	//increased though the FPow function will need
+	//to be changed.
+	for(Cnt = 0; Cnt<10; Cnt++){
+		if(Num>=FPow(10, Cnt)){
+			Len = Cnt;
+		}
+		else{
+			Len = Cnt;
+			break;
+		}
+	}
+
+	return Len;
 }
 
 //A cool function to print numbers to the screen.
@@ -285,24 +313,7 @@ int8_t PNum(int32_t Num, uint8_t X, uint8_t Y, uint8_t Pad){
 		NegNum = 1;
 	}
 
-	//Find length of number by continuously
-	//comparing to ascending powers of 10.
-	//When the number is less than the power of
-	//10, the length of the number is found and
-	//the loop is complete. 32bits supports
-	//numbers up to 10dp so that is my max loop
-	//size! If a 64bit system is used, this can be
-	//increased though the FPow function will need
-	//to be changed.
-	for(Cnt = 0; Cnt<10; Cnt++){
-		if(Num>=FPow(10, Cnt)){
-			Len = Cnt;
-		}
-		else{
-			Len = Cnt;
-			break;
-		}
-	}
+	Len = CheckNumLength(Num);
 
 	//If the length of the number will print
 	//off the screen, return respective error.
@@ -347,6 +358,93 @@ int8_t PNum(int32_t Num, uint8_t X, uint8_t Y, uint8_t Pad){
 
 	//As per, return 0 if all is good!
 	return 0;
+}
+
+//A somewhat simple fucntion to print floating point
+//numbers! Its undefined for times where the precision
+//exceeds the decimal section of the number e.g.
+//if you try and display 1.01 with a precision of 3.
+//You should always try and display the decimal number
+//to the precision you want or less!
+int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
+	int32_t INum, DNum;
+	uint32_t PrecPow = FPow(10, Prec);
+	uint8_t Len = 0, Cnt, OriginX;
+
+	//If number is less than zero, print '-' sign
+	//and invert the number.
+	if(Num<0.0f){
+		Num = -Num;
+		PChar('-', X, Y);
+
+		//As a new character is printed, increment
+		//the X position.
+		X++;
+	}
+
+	INum = Num;
+
+	//If the integer section of the number is 0
+	//Print the leading zero. Without this, only
+	//a decimal point will be printed!
+	if(INum==0){
+		PChar('0', X, Y);
+
+		//Increment the position of X as a new
+		//character has been printed.
+		X++;
+	}
+	else{
+		//If the integer part of the number isn't
+		//equal to 0, find the length of the number
+		//and print it! Increment the X position by
+		//the length of the number.
+		Len = CheckNumLength(INum);
+
+		PNum(INum, X, Y, 0);
+		X+=Len;
+	}
+
+	//If the precision specified is more than 0
+	if(Prec>0){
+		//Print the decimal point after the integer
+		//part of the number.
+		PChar('.', X, Y);
+
+		//Increment the position of the X counter
+		X++;
+
+		//Multiply the floating point number by
+		//10^precision - this shifts the numbers
+		//below the decimal point, over the decimal
+		//point
+		Num*=(float)PrecPow;
+
+		//Convert the floating point number into an
+		//integer, this truncates the decimal values
+		DNum = Num;
+
+		//Subtract the initial integer part of the
+		//number which won't contain the newly shifted
+		//decimal values.
+		DNum-=INum*PrecPow;
+
+		//Check the length of the new decimal part of
+		//the number
+		Len = CheckNumLength(DNum);
+
+		//If this number length is less than the specified
+		//precision, pad with leading zeros and increment
+		//the current X position.
+		if(Len<Prec){
+			for(Cnt = Len; Cnt<Prec; Cnt++){
+				PChar('0', X, Y);
+				X++;
+			}
+		}
+
+		PNum(DNum, X, Y, 0);
+	}
 }
 
 //A simple function to clear the whole display.

@@ -10,7 +10,7 @@
       <source file="..\..\..\stm32_lib\inc\stm32f0xx_gpio.h" lastModified="147d66dcbd8">
          <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
       </source>
-      <source file="..\..\..\HD44780_Library\HD44780LIB.h" lastModified="147ea7d41dc">
+      <source file="..\..\..\HD44780_Library\HD44780LIB.h" lastModified="147ef97a30f">
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_gpio.h"/>
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
       </source>
@@ -21,14 +21,11 @@
          <include file="..\..\..\cmsis_core\core_cm0.h"/>
          <include file="..\..\..\cmsis_boot\system_stm32f0xx.h"/>
       </source>
-      <source file="..\..\..\HD44780_Library\HD44780LIB.c" lastModified="147ea7c19b6">
+      <source file="..\..\..\HD44780_Library\HD44780LIB.c" lastModified="147efc7c11f">
          <include file="..\..\..\HD44780_Library\HD44780LIB.h"/>
       </source>
       <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147d66dcbdc">
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
-      </source>
-      <source file="..\..\..\main.c" lastModified="147ea7d83c4">
-         <include file="..\..\..\HD44780_Library\HD44780LIB.h"/>
       </source>
       <source file="..\..\..\cmsis_core\core_cmInstr.h" lastModified="147d66dd3a6">
       </source>

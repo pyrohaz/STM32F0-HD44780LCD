@@ -66,13 +66,18 @@ int main(void)
 
 	//Print the number 9 after the hello world message
 	PNum(9, 14, 1, 0);
+
 	//Print the number -1237 with 2 zeros of padding
 	//on the second line, will print "-001237"
 	PNum(-1237, 0, 2, 2);
 
+	//Print the number 0.12345 to 3dp on the second
+	//line, this will print "0.123"
+	PNumF(0.12345f, 10, 2, 3);
+
 	//Delay for 2 seconds until the Millisecond counter is
 	//displayed.
-	Delay(2000);
+	Delay(4000);
 
 	//Clear the current display.
 	ClrDisp();
@@ -80,6 +85,7 @@ int main(void)
 	//Reset millisecond counter!
 	MSec = 0;
 
+	float FloatNum = 1.01f;
 	while(1)
 	{
 		//If bouncing text is defined, run the bouncing text
@@ -109,7 +115,16 @@ int main(void)
 		Delay(500);
 #endif
 
-		//Display millisecond counter!
-		PNum(MSec, 0, 1, 0);
+		//Display the changing floating point number!
+		//NOTE: This number will eventually spiral out
+		//of control, as the magnitude exponentially
+		//increases. When it gets sufficiently large,
+		//it will break my PNumF function as there will
+		//be no more room in a 32bit integer to calculate
+		//the decimal place!
+		PNumF(FloatNum, 0, 1, 3);
+		FloatNum*=-1.05f;
+		Delay(500);
+		ClrDisp();
 	}
 }

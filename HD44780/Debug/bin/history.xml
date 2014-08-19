@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="4.4.1 -mcpu=cortex-m0 -mthumb -g -nostartfiles -Map=HD44780.map -O1 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\HD44780 -TC:\CooCox\CoIDE\configuration\ProgramData\HD44780/arm-gcc-link.ld -g">
-      <target file="HD44780.elf" lastModified="147ea85b163">
-         <source file="..\obj\stm32f0xx_rcc.o" lastModified="147ea85a8fc"/>
-         <source file="..\obj\main.o" lastModified="147ea85aa33"/>
-         <source file="..\obj\startup_stm32f0xx.o" lastModified="147ea85aaa2"/>
-         <source file="..\obj\HD44780LIB.o" lastModified="147ea85abd2"/>
-         <source file="..\obj\system_stm32f0xx_temp.o" lastModified="147ea85ace4"/>
-         <source file="..\obj\stm32f0xx_gpio.o" lastModified="147ea85ae05"/>
+   <processor signature="4.4.1 -mcpu=cortex-m0 -mthumb -g -nostartfiles -Map=HD44780.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\HD44780 -TC:\CooCox\CoIDE\configuration\ProgramData\HD44780/arm-gcc-link.ld -g">
+      <target file="HD44780.elf" lastModified="147efcc5dcd">
+         <source file="..\obj\stm32f0xx_rcc.o" lastModified="147ef993d4e"/>
+         <source file="..\obj\main.o" lastModified="147efcc5ab4"/>
+         <source file="..\obj\startup_stm32f0xx.o" lastModified="147ef993edf"/>
+         <source file="..\obj\HD44780LIB.o" lastModified="147efc7dafa"/>
+         <source file="..\obj\system_stm32f0xx_temp.o" lastModified="147ef994175"/>
+         <source file="..\obj\stm32f0xx_gpio.o" lastModified="147ef9942a0"/>
       </target>
    </processor>
 </history>

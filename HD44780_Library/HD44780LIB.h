@@ -85,6 +85,7 @@ void H_W8b(uint8_t, uint8_t);
 int8_t PStr(const char*, uint8_t, uint8_t);
 int8_t PChar(char, uint8_t, uint8_t);
 int8_t PNum(int32_t, uint8_t, uint8_t, uint8_t);
+int8_t PNumF(float, uint8_t, uint8_t, uint8_t);
 
 //Display control functions
 void ClrDisp(void);

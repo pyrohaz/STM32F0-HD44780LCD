@@ -214,11 +214,11 @@ int8_t PStr(const char* S, uint8_t X, uint8_t Y){
 	StrLen = Strlen(S);
 
 	//If the string is too long, return -3
-	if(StrLen>(H_XSize-1)) return -3;
+	if(StrLen>(H_XSize)) return -3;
 
 	//If the total string length will be out of
 	//the screen, return -1
-	if(X>(H_XSize-1-StrLen)) return -1;
+	if(X>(H_XSize-StrLen)) return -1;
 
 	//If the row is anything other than 1 or 2,
 	//return -2
@@ -249,7 +249,7 @@ int8_t PChar(char C, uint8_t X, uint8_t Y){
 
 	//If the position of the character will be
 	//off the screen, return respective error.
-	if(X>(H_XSize-2)) return -1;
+	if(X>(H_XSize-1)) return -1;
 	if(Y!=1 && Y!=2) return -2;
 
 	//If the row is row 1, the address range
@@ -386,15 +386,7 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 
 	INum = Num;
 
-	//If the negative number flag is set, print
-	//the '-' sign
-	if(NegNum){
-		PChar('-', X, Y);
 
-		//As a new character is printed, increment
-		//the X position.
-		X++;
-	}
 
 	//If the integer section of the number is 0
 	//Print the leading zero. Without this, only
@@ -402,6 +394,16 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 	if(INum==0){
 		if((Prec+2+NegNum)>(H_XSize-X)){
 			return - 1;
+		}
+
+		//If the negative number flag is set, print
+		//the '-' sign
+		if(NegNum){
+			PChar('-', X, Y);
+
+			//As a new character is printed, increment
+			//the X position.
+			X++;
 		}
 
 		PChar('0', X, Y);
@@ -419,6 +421,16 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 
 		if((Len+Prec+2+NegNum)>(H_XSize-X)){
 			return - 1;
+		}
+
+		//If the negative number flag is set, print
+		//the '-' sign
+		if(NegNum){
+			PChar('-', X, Y);
+
+			//As a new character is printed, increment
+			//the X position.
+			X++;
 		}
 
 		PNum(INum, X, Y, 0);

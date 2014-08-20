@@ -20,13 +20,13 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/main.c" title="main.c" tooltip="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/main.c" title="main.c" tooltip="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HD44780/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3050" selectionTopPixel="1381"/>
+<editorState selectionHorizontalPixel="0" selectionLength="58" selectionOffset="1151" selectionTopPixel="477"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="HD44780LIB.c" partName="HD44780LIB.c" path="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/HD44780_Library/HD44780LIB.c" title="HD44780LIB.c" tooltip="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/HD44780_Library/HD44780LIB.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="HD44780LIB.c" partName="HD44780LIB.c" path="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/HD44780_Library/HD44780LIB.c" title="HD44780LIB.c" tooltip="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/HD44780_Library/HD44780LIB.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HD44780/HD44780_Library/HD44780LIB.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12048" selectionTopPixel="5864"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13594" selectionOffset="0" selectionTopPixel="1434"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="HD44780LIB.h" partName="HD44780LIB.h" path="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/HD44780_Library/HD44780LIB.h" title="HD44780LIB.h" tooltip="C:/CooCox/CoIDE/workspace/HD44780/STM32F0-HD44780LCD_ChargePump/STM32F0-HD44780LCD/HD44780_Library/HD44780LIB.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HD44780/HD44780_Library/HD44780LIB.h"/>
@@ -109,14 +109,14 @@
 <view id="org.coocox.component.ui.ComponentView" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
-<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@128158" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
-<fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@7b2d93" orientation="512" selectedTabId="org.coocox.component.ui.Help" style="1">
 <fastViews>
 <view id="org.coocox.component.ui.Help" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@128158" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -258,28 +258,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HD44780/HD44780_Library/HD44780LIB.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HD44780/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/HD44780/cmsis_boot/startup/startup_stm32f0xx.s"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/HD44780/main.c"/>
 </editors>
-<item historyLabel="HD44780LIB.c" index="0">
-<position info="not_deleted" x="11018" y="5"/>
-</item>
-<item historyLabel="HD44780LIB.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="2">
-<position info="not_deleted" x="3052" y="0"/>
-</item>
-<item historyLabel="HD44780LIB.c" index="0">
-<position info="not_deleted" x="11018" y="5"/>
-</item>
-<item historyLabel="HD44780LIB.c" index="0">
-<position/>
-</item>
-<item historyLabel="HD44780LIB.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="2">
-<position info="not_deleted" x="3049" y="0"/>
-</item>
 <item historyLabel="HD44780LIB.c" index="0">
 <position info="not_deleted" x="11018" y="5"/>
 </item>
@@ -406,8 +386,29 @@
 <item historyLabel="HD44780LIB.c" index="0">
 <position/>
 </item>
-<item active="true" historyLabel="HD44780LIB.c" index="0">
+<item historyLabel="HD44780LIB.c" index="0">
 <position info="not_deleted" x="11753" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2563" y="0"/>
+</item>
+<item historyLabel="HD44780LIB.c" index="0">
+<position info="not_deleted" x="3691" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1389" y="0"/>
+</item>
+<item historyLabel="HD44780LIB.c" index="0">
+<position info="not_deleted" x="3627" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1019" y="0"/>
+</item>
+<item historyLabel="HD44780LIB.c" index="0">
+<position info="not_deleted" x="0" y="13594"/>
+</item>
+<item active="true" historyLabel="main.c" index="4">
+<position info="not_deleted" x="1128" y="22"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -416,6 +417,28 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
+<persistable>
+<org.coocox.builder.ui.editors.ConfigEditor/>
+</persistable>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f0xx.s" tooltip="HD44780+SR04/cmsis_boot/startup/startup_stm32f0xx.s">
+<persistable path="/HD44780+SR04/cmsis_boot/startup/startup_stm32f0xx.s"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HD44780LIB.c" tooltip="HD44780+SR04/HD44780Library/HD44780LIB.c">
+<persistable path="/HD44780+SR04/HD44780Library/HD44780LIB.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HD44780LIB.h" tooltip="HD44780+SR04/HD44780Library/HD44780LIB.h">
+<persistable path="/HD44780+SR04/HD44780Library/HD44780LIB.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="HD44780+SR04/main.c">
+<persistable path="/HD44780+SR04/main.c"/>
+</file>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>
+<subPage/>
+</persistable>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f0xx.s" tooltip="HD44780/cmsis_boot/startup/startup_stm32f0xx.s">
 <persistable path="/HD44780/cmsis_boot/startup/startup_stm32f0xx.s"/>
 </file>
@@ -439,25 +462,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f0xx_gpio.h" tooltip="HC-04Ultrasonic/stm32_lib/inc/stm32f0xx_gpio.h">
 <persistable path="/HC-04Ultrasonic/stm32_lib/inc/stm32f0xx_gpio.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="HC-04Ultrasonic/main.c">
-<persistable path="/HC-04Ultrasonic/main.c"/>
-</file>
-<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
-<persistable>&#x0A;<subPage/>
-</persistable>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f0xx_gpio.h" tooltip="HD44780/stm32_lib/inc/stm32f0xx_gpio.h">
-<persistable path="/HD44780/stm32_lib/inc/stm32f0xx_gpio.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f0xx.s" tooltip="HC-04Ultrasonic/cmsis_boot/startup/startup_stm32f0xx.s">
-<persistable path="/HC-04Ultrasonic/cmsis_boot/startup/startup_stm32f0xx.s"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="semihosting.h" tooltip="HC-04Ultrasonic/semihosting/semihosting.h">
-<persistable path="/HC-04Ultrasonic/semihosting/semihosting.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f0xx_rcc.h" tooltip="HC-04Ultrasonic/stm32_lib/inc/stm32f0xx_rcc.h">
-<persistable path="/HC-04Ultrasonic/stm32_lib/inc/stm32f0xx_rcc.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="HMC5883L2/main.c">
 <persistable path="/HMC5883L2/main.c"/>

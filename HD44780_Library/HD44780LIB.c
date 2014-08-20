@@ -237,8 +237,8 @@ int8_t PStr(const char* S, uint8_t X, uint8_t Y){
 		H_W8b(S[Cnt], 1);
 	}
 
-	//If all is successful, return 0!
-	return 0;
+	//If all is successful, return current X position!
+	return X+Len;
 }
 
 //Print a single character at the position X, Y
@@ -264,8 +264,8 @@ int8_t PChar(char C, uint8_t X, uint8_t Y){
 	//as opposed to an instruction register
 	H_W8b(C, 1);
 
-	//If all is successful, 0 will be returned!
-	return 0;
+	//If all is successful, current X position will be returned!
+	return X+1;
 }
 
 //A simple function that compares a number to
@@ -359,8 +359,8 @@ int8_t PNum(int32_t Num, uint8_t X, uint8_t Y, uint8_t Pad){
 		H_W8b('0'+ ((Num/FPow(10, Cnt))%10), 1);
 	}
 
-	//As per, return 0 if all is good!
-	return 0;
+	//As per, return current X if all is good!
+	return X+Len;
 }
 
 //A somewhat simple fucntion to print floating point
@@ -385,8 +385,6 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 	}
 
 	INum = Num;
-
-
 
 	//If the integer section of the number is 0
 	//Print the leading zero. Without this, only
@@ -476,10 +474,11 @@ int8_t PNumF(float Num, uint8_t X, uint8_t Y, uint8_t Prec){
 		}
 
 		PNum(DNum, X, Y, 0);
+		X+=Len;
 	}
 
-	//If all printed well, return 0 to indicate success!
-	return 0;
+	//If all printed well, return current X position to indicate success!
+	return X+Len;
 }
 
 //A simple function to clear the whole display.

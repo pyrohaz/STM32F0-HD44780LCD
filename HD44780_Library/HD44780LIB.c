@@ -238,7 +238,7 @@ int8_t PStr(const char* S, uint8_t X, uint8_t Y){
 	}
 
 	//If all is successful, return current X position!
-	return X+Len;
+	return X+StrLen;
 }
 
 //Print a single character at the position X, Y
